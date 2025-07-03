@@ -1,0 +1,134 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #0b0c10;
+  color: white;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 350px;
+  width: 90vw;
+  box-sizing: border-box;
+}
+
+input, button {
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #1f8ef1;
+  color: white;
+  cursor: pointer;
+}
+
+.weather-info img {
+  width: 50px;
+  max-width: 100%;
+  height: auto;
+}
+
+#error {
+  color: red;
+}
+
+#globeViz {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none; /* Allow UI interaction above globe */
+  background: #0b0c10; /* Ensures a consistent background */
+  transition: height 0.3s, width 0.3s;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .container {
+    position: static;
+    margin: 20px auto 0 auto;
+    width: 98vw;
+    max-width: 600px;
+    background-color: rgba(255,255,255,0.15);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  #globeViz {
+    position: relative;
+    margin: 0 auto;
+    width: 98vw;
+    max-width: 600px;
+    height: 50vw;
+    min-height: 250px;
+    z-index: 1;
+    pointer-events: auto;
+    background: #0b0c10;
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+  body {
+    overflow: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 10px auto 0 auto;
+    width: 99vw;
+    max-width: 99vw;
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+  #globeViz {
+    margin: 0 auto;
+    width: 99vw;
+    max-width: 99vw;
+    height: 60vw;
+    min-height: 140px;
+    border-radius: 10px;
+  }
+  input, button {
+    font-size: 0.95rem;
+    padding: 8px;
+  }
+  .weather-info img {
+    width: 36px;
+  }
+  h1 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding: 5px;
+    font-size: 0.9rem;
+    margin: 5px auto 0 auto;
+  }
+  #globeViz {
+    margin: 0 auto;
+    width: 98vw;
+    max-width: 98vw;
+    height: 80vw;
+    min-height: 100px;
+    border-radius: 10px;
+  }
+  h1 {
+    font-size: 1rem;
+  }
+}
