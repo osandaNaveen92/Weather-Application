@@ -11,11 +11,6 @@ A modern weather application that provides real-time weather updates for locatio
 - **Weather Icons:** Visual representation of weather conditions.
 - **Global Coverage:** Supports weather data for cities around the world.
 
-## Demo
-
-![Weather Globe Screenshot](screenshot.png)  
-*Add a screenshot of your application here.*
-
 ## Getting Started
 
 Follow these instructions to set up and run the project locally.
